@@ -17,16 +17,16 @@ This plugin adds ACF areas for custom scripts in the header or footer. It's usef
 Usage:
 1.  Activate the plugin.
 
-2.  Add the following code just after the opening <body> tag: <?php do_action('custom_script_tags_plugin_before_closing_body'); ?>
+2.  Add the following code just after the opening <body> tag: `<?php do_action('custom_script_tags_plugin_before_closing_body'); ?>`
 
 3. Add your scripts to the Settings > Custom Scripts options page. The plugin will use wp_head and wp_footer hooks to insert the custom code, in addition to the custom custom_script_tags_plugin_before_closing_body hook you added after <body>.
 
 4. It's uncommon, but you can also manually insert calls to the options (like if you exclude wp_head or wp_footer from a particular page for some reason but still want scripts). Just add the following code in the appropriate locations:
-
+```
 <?php the_field('after_opening_body', 'option'); ?>
 <?php the_field('before_closing_body', 'option'); ?>
 <?php the_field('before_closing_head', 'option'); ?>
-    
+```
 
 == Installation ==
 

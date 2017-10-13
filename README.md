@@ -4,7 +4,7 @@ Contributors: tcmulder
 Tags: custom scripts, scripts, analytics, acf
 Requires at least: 4.7.3
 Tested up to: 4.7.3
-Stable tag: 1.0.2
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ This plugin adds ACF areas for custom scripts in the header or footer. It's usef
 Usage:
 1.  Activate the plugin.
 
-2.  Add the following code just after the opening <body> tag: `<?php do_action('custom_script_tags_plugin_before_closing_body'); ?>`
+2.  Add the following code just after the opening <body> tag: `<?php do_action('custom_script_tags_plugin_after_opening_body'); ?>` (since there's no hook to place code here you need to add this one manually).
 
 3. Add your scripts to the Settings > Custom Scripts options page. The plugin will use wp_head and wp_footer hooks to insert the custom code, in addition to the custom custom_script_tags_plugin_before_closing_body hook you added after <body>.
 
@@ -34,6 +34,11 @@ Usage:
 2. Activate the plugin through the "Plugins" menu in WordPress.
 
 == Changelog ==
+
+= 2.0.0 =
+
+* Introduced breaking changes.
+* Updated name of be before_closing_body to the correct after_opening_body.
 
 = 1.0.2 =
 

@@ -2,7 +2,7 @@
 /*
 Plugin Name: Custom Script Tags
 Description: Add ACF areas for custom scripts in the header or footer.
-Version:     1.0.2
+Version:     2.0.0
 Author:      Tomas Mulder
 Author URI:  http://www.tcmulder.com
 License:     GPL2
@@ -36,7 +36,7 @@ Class Custom_Script_Tags_Plugin {
             self::init_hooks();
             add_action( 'acf/init', array( 'Custom_Script_Tags_Plugin', 'create_options_page' ) );
             add_action( 'wp_head', array( 'Custom_Script_Tags_Plugin', 'add_script_before_closing_head' ), 10 );
-            add_action( 'custom_script_tags_plugin_before_closing_body', array( 'Custom_Script_Tags_Plugin', 'add_script_after_opening_body' ) );
+            add_action( 'custom_script_tags_plugin_after_opening_body', array( 'Custom_Script_Tags_Plugin', 'add_script_after_opening_body' ) );
             add_action( 'wp_footer', array( 'Custom_Script_Tags_Plugin', 'add_script_before_closing_body' ), 50 );
         }
     }

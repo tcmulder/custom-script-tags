@@ -1,4 +1,4 @@
-=== Apply ACF Layout ===
+=== Custom Scripts ===
 
 Contributors: tcmulder
 Tags: custom scripts, scripts, analytics, acf
